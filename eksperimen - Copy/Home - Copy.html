@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>
+        Ayat Hari Ini
+    </title>
+    <link rel="stylesheet" href="styleHome.css">
+    <link rel="icon" type="image/png" href="logoH.png">
+    
+</head>
+<body>
+    
+    <div class="quote-box">
+        <h2 id="input">Halo! Masukkan nama anda ...</h2>
+        <br>
+        <form name="myForm" id="form">
+            <input type="text" placeholder="Masukkan nama" id="nama" name="nama" autofocus
+            autocomplete="off"  required/>
+            
+            <button type="submit" id="submit">
+                Dapatkan Ayat
+            </button>
+        </form>
+        
+            
+
+    </div>
+    <pre>
+        <footer id="footer">&copy; 2024 HCS</footer>
+    </pre>
+    
+    <script >
+let sub = document.getElementById("submit");
+const form = document.getElementById("form");
+
+form.addEventListener("submit", (e) =>{
+    e.preventDefault();
+        let x = document.forms["myForm"]["nama"].value;
+        if(x ==""){
+        
+        
+        }else{
+            var inputData = document.getElementById("nama").value;
+            localStorage.setItem("inputData", inputData);
+            window.location.assign( 'Coba Ayat - Copy.html');
+    }
+    
+    
+})
+
+sub.addEventListener("click", () => 
+{
+    let x = document.forms["myForm"]["nama"].value;
+    if(x ==""){
+       
+        
+    }else{
+        var inputData = document.getElementById("nama").value;
+        localStorage.setItem("inputData", inputData);
+        window.location.assign( 'Coba Ayat - Copy.html');
+    }
+    
+})
+
+
+
+    </script>
+</body>
+</html>

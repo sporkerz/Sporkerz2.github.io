@@ -1,0 +1,346 @@
+/* body {
+  background-color: #2ea738;
+  text-align: center;
+  
+} 
+
+h2{
+  color:crimson;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-size: 32px;
+  
+  position: relative;
+  margin-top : 0%;
+}
+
+h2::after{
+  content:'';
+  width: 75px;
+  height: 3px;
+  border-radius: 3px;
+  background-color: rgb(23, 124, 229);
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+} */
+
+/* blockquote{
+  font-size: 22px;
+  min-height: 110px;
+}
+
+blockquote::before,  blockquote::after{
+  content: '"';
+}
+
+span{
+  display: block;
+  margin-top: 2px;
+  float: right;
+  position: relative;
+  font-size: 20px;
+}
+
+span::before{
+content:'';
+width: 20px;
+height: 2px;
+background-color: rgb(23,124, 229);
+position: absolute;
+top: 50%;
+left: -30px;
+
+} */
+
+
+
+
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic);
+
+/* //----- Global */
+body {
+  font-family:'Open Sans';
+  line-height:200%;
+  background:#d75f70;
+}
+
+.main {
+  width:800px;
+  margin:160px auto;
+  text-align:center;
+}
+
+h1, h2, h3 {
+  color:#fff;
+}
+
+h1 {
+  margin-bottom:30px;
+  font-size:44px;
+}
+
+h2 {
+  margin-bottom:20px;
+  font-size:32px;
+}
+
+h3 {
+  font-size:21px;
+  
+}
+
+p {
+  font-size:18px;
+  color:#ffd5df;
+  
+}
+
+
+
+  
+  
+/* //----- Popoup */
+.popup-wrap {
+  width:100%;
+  height:100%;
+  display:none;
+  position:absolute;
+  top:0px;
+  left:0px;
+  content:'';
+  background:rgba(0,0,0,0.85);
+}
+
+.popup-box {
+  width: 50%;
+  max-width: 90%;
+  padding: 20px 20%;
+  transform: translate(-50%, -50%) scale(0.5);
+  overflow: auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  box-shadow: 0px 2px 16px rgba(0, 0, 0, 0.5);
+  border-radius: 3px;
+  background: #fff;
+  text-align: center;
+  max-height: 70%; /* Atur tinggi maksimum untuk memastikan pop-up tetap di dalam frame */
+
+  
+  #header {
+    color:#1a1a1a;
+    
+    overflow: hidden;
+    text-overflow: ellipsis;
+    
+  }
+
+  #newQuote {
+    font-size: 24px;
+    align-self: center;
+    margin: -20px;
+    
+  }
+
+  
+
+  #book{
+    font-size: 18px;
+  }
+  
+  h3 {
+    color:#888;
+  }
+  
+  .close-btn {
+    width:35px;
+    height:35px;
+    display:inline-block;
+    position:absolute;
+    top:10px;
+    right:10px;
+    -webkit-transition:all ease 0.5s;
+    transition:all ease 0.5s;
+    border-radius:1000px;
+    background:#d75f70;
+    font-weight:bold;
+    text-decoration:none;
+    color:#fff;
+    line-height:190%;
+    
+    &:hover {
+      -webkit-transform:rotate(180deg);
+      transform:rotate(180deg);
+    }
+  }
+}
+
+.transform-in, .transform-out {
+  display:block;
+  -webkit-transition:all ease 0.5s;
+  transition:all ease 0.5s;
+}
+
+.transform-in {
+	-webkit-transform:translate(-50%, -50%) scale(1);
+	transform:translate(-50%, -50%) scale(1);
+}
+
+.transform-out {
+	-webkit-transform:translate(-50%, -50%) scale(0.5);
+	transform:translate(-50%, -50%) scale(0.5);
+}
+  
+  /* crack */
+  #path-11 {
+    animation: cracking 10s forwards;
+  }
+  
+  
+  
+  @keyframes cracking {
+    0% {
+      x: 0px;
+      width: 0;
+    }
+    6% {
+      x: 5px;
+      width: 0;
+    }
+    11% { 
+      x: 5px;
+      width: 50px; 
+    }
+    16% { 
+      x: 5px;
+      width: 50px; 
+    }
+    20% {
+      x: -20px;
+      width: 100px; 
+    }
+    25% { 
+      x: -20px;
+      width: 100px; 
+    }
+    40% {
+      x: -80px;
+      width: 260px;
+    }
+    100% {
+      x: -80px;
+      width: 260px;
+    }
+  }
+  
+#svg{
+ 
+  position: absolute;
+  z-index: -1;
+	float: right;
+	top:50%;
+  left: 50%;
+  display: flex;
+  justify-content: center; /* Menempatkan elemen di tengah secara horizontal */
+  transform: translate(-50%, -50%);
+  
+  
+ }
+  
+  @keyframes shaking {
+    0% {
+      transform: rotate(0deg);
+    }
+    1% {
+      transform: rotate(3deg);
+    }
+    2% {
+      transform: rotate(0deg);
+    }
+    3% {
+      transform: rotate(-3deg);
+    }
+    4% {
+      transform: rotate(0deg);
+    }
+    10% {
+      transform: rotate(0deg);
+    }
+    11% {
+      transform: rotate(3deg);
+    }
+    12% {
+      transform: rotate(0deg);
+    }
+    13% {
+      transform: rotate(-3deg);
+    }
+    14% {
+      transform: rotate(0deg);
+    }
+    20% {
+      transform: rotate(0deg);
+    }
+    21% {
+      transform: rotate(3deg);
+    }
+    22% {
+      transform: rotate(0deg);
+    }
+    23% {
+      transform: rotate(-3deg);
+    }
+    24% {
+      transform: rotate(0deg);
+    }
+  
+  }
+  
+  #egg-upper {
+    animation: crackout 10s forwards;
+    transform-origin: center right;
+    fill: #fcc120;
+    
+  }
+  
+  @keyframes crackout {
+    0% {
+      transform: rotate(0deg);
+      transform: translateY(0px);
+    }
+    30% {
+      transform: rotate(0deg);
+      transform: translateY(0px);
+    }
+    35% {
+      transform: rotate(0deg);
+      transform: translateY(-15px);
+    }
+    40% {
+      transform: rotate(0deg);
+      transform: translateY(-10px);
+    }
+    45% {
+      transform-origin: bottom right;
+      transform: translateY(-20px);
+    }
+    50% {
+      transform-origin: center center;
+      transform: translateY(-15px);
+    }
+    70% {
+      transform-origin: bottom right;
+      transform: translateY(130px) rotate(120deg);
+    } 
+    90% {
+      transform-origin: bottom right;
+      transform: translateY(130px) rotate(130deg);
+    }
+    100% {
+      transform-origin: bottom right;
+      transform: translateY(130px) rotate(130deg); /* Menghapus transformasi yang membuat telur tertutup */
+    }
+  }
+  
+  
